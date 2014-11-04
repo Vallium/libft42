@@ -6,9 +6,11 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 10:58:17 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/04 11:04:51 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/04 12:39:01 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 size_t			ft_strlen(const char *tab)
 {
