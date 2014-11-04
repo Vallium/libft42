@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 17:34:11 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/04 17:42:39 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/04 17:45:52 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ char		*ft_strchr(const char *s, int c)
 	}
 	return ((char*)s);
 }
-
