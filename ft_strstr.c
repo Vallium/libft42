@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 10:17:32 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/05 14:18:49 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/05 14:27:17 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,17 @@ static int		ft_scan(const char *s1, const char *s2)
 char			*ft_strstr(const char *s1, const char *s2)
 {
 	int		i;
+	char	*str;
 
+	str = (char*)s1;
 	if (!*s2)
-		return ((char*)s1);
+		return (str);
 	i = 0;
-	while (s1[i])
+	while (str[i])
 	{
-		if (s1[i] == s2[i])
-			if (ft_scan(&s1[i], s2))
-				return ((char*)&s1[i]);
+		if (str[i] == s2[i])
+			if (ft_scan(&str[i], s2))
+				return (&str[i]);
 		i++;
 	}
 	return (NULL);
