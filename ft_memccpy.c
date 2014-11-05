@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 16:56:34 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/05 17:23:06 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/05 17:47:43 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	car = (unsigned char)c;
 	while (n--)
 	{
-		if((*strdst++ = *strsrc++) == car)
-			return(strdst);
+		if ((*strdst++ = *strsrc++) == car)
+			return (strdst);
 	}
 	return (NULL);
 }
