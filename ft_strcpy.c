@@ -6,19 +6,17 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:18:44 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/04 13:25:09 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/05 13:08:02 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char		*ft_strcpy(char *dst, const char *src)
 {
-	int		i;
-
-	i = 0;
-	while (src[i])
+	while (*src != '\0')
 	{
-		dst[i] = src[i];
-		i++;
+		*dst = *src;
+		src++;
+		dst++;
 	}
 	return (dst);
 }
