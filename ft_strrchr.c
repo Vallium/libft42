@@ -11,20 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char		*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	char	*ch;
 
-	i = ft_strlen(s) - 1;
-	if (!c)
-		return ((char*)&s[i + 1]);
-	while (i > 0)
+	while (*s)
 	{
-		if (s[i] == c)
-			return ((char*)&s[i]);
-		i--;
+		if (*s == c)
+			ch = (char*)s;
+		s++;
 	}
-	return (NULL);
+	return (!c ? (char*)s : ch);
 }
