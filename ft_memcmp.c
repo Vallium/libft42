@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 17:51:30 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/05 18:16:16 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/06 10:26:46 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int						ft_memcmp(const void *s1, const void *s2, size_t n)
 	str2 = (const unsigned char*)s2;
 	while (n--)
 	{
-		if (s1 != s2)
+		if (*str1 != *str2)
 			return (*str1 - *str2);
 		*str1++;
 		*str2++;
