@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/06 17:36:59 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/06 18:26:03 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_atoi(const char *str);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
+int			ft_strequ(const char *s1, const char *s2);
+int			ft_strnequ(const char *s1, const char *s2, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
 void		ft_strdel(char **as);
@@ -50,6 +52,8 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t n);
 char		*ft_strnew(size_t size);
 char		*ft_strmap(const char *s, char (*f)(char));
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char		*ft_strsub(const char *s, unsigned int start, size_t len);
+char		*ft_strsub(const char *s1, const char *s2);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 
