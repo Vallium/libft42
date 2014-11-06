@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/05 18:18:19 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/06 10:43:55 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char		*ft_strrchr(const char *s, int c);
 char		*ft_strstr(const char *s1, const char *s2);
 char		*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t		ft_strlen(const char *s);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
