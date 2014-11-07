@@ -13,28 +13,39 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char			*ft_strtrim(const char *s)
+static unsigned int		ft_sp(char c)
 {
-	char		*dst;
-	char		*ret;
-	size_t		i;
-	size_t		e;
+	return (c == ' ' || c == '\t' || c == '\n');
+}
+
+char					*ft_strtrim(const char *s)
+{
+	char				*dst;
+	char				*ret;
+	char				*str;
+	size_t				i;
+	size_t				e;
 
 	if (!s)
 		return (NULL);
+	str = (char*)s;
 	i = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	while (ft_sp(*str++))
 		i++;
-	e = ft_strlen(s);
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		e--;
-	dst = (char*)malloc(sizeof(char) * ((e - i) + 1));
+	str--;
+	e = ft_strlen(s) - 1;
+	if (i != (e + 1))
+		while (ft_sp(s[e]))
+			e--;
+	dst = (char*)malloc(sizeof(char) * (e - i + 1));
+	if (!dst)
+		return (NULL);
 	ret = dst;
 	while (i <= e)
 	{
-		*dst++ = s[i];
+		*dst++ = *str++;
 		i++;
 	}
-	dst[i] = 0;
+	*dst = 0;
 	return (ret);
 }
