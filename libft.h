@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/06 18:26:03 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/07 13:28:44 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ char		*ft_strnew(size_t size);
 char		*ft_strmap(const char *s, char (*f)(char));
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		*ft_strsub(const char *s, unsigned int start, size_t len);
-char		*ft_strsub(const char *s1, const char *s2);
+char		*ft_strtrim(const char *s);
+char		*ft_strjoin(const char *s1, const char *s2);
+char		**ft_strsplit(const char *s, char c);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 

@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 14:48:37 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/06 15:36:27 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/07 13:31:44 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 void			ft_strdel(char **as)
 {
-	free(*as);
-	*as = NULL;
+	if (as && *as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }
