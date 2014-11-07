@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 11:57:43 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/07 14:28:26 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/07 17:12:41 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,8 @@ char					*ft_strtrim(const char *s)
 	if (!dst)
 		return (NULL);
 	ret = dst;
-	while (i <= e)
-	{
+	while (i++ <= e)
 		*dst++ = *str++;
-		i++;
-	}
 	*dst = 0;
 	return (ret);
 }

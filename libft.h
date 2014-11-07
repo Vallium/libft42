@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/07 15:12:56 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/07 17:49:15 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ int			ft_atoi(const char *str);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 int			ft_strequ(const char *s1, const char *s2);
 int			ft_strnequ(const char *s1, const char *s2, size_t n);
+void		ft_putchar(char c);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr(const char *s);
+void		ft_putstr_fd(const char *s, int fd);
+void		ft_putendl(const char *s);
+void		ft_putendl_fd(const char *s, int fd);
+void		ft_putnbr(int n);
+void		ft_putnbr_fd(int n);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
 void		ft_strdel(char **as);
