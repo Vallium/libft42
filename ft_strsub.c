@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 17:55:01 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/09 17:59:18 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/09 18:13:10 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char			*ft_strsub(const char *s, unsigned int start, size_t len)
 	char		*dst;
 	char		*ret;
 
-	if (!s)
+	if (!s || !*s || !len)
 		return (NULL);
 	dst = (char*)malloc(sizeof(char) * (len + 1));
 	if (!dst)
