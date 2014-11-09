@@ -6,16 +6,23 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:48:26 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/05 14:51:58 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/09 17:08:32 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strcmp(const char *s1, const char *s2)
+int					ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 == *s2 && *s1 != 0 && *s2 != 0)
+	unsigned char	*str1;
+	unsigned char	*str2;
+
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (*str1 || *str2)
 	{
-		s1++;
-		s2++;
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
 	}
-	return (*s1 - *s2);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 13:55:59 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/06 14:00:40 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/09 16:55:50 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 void		ft_memdel(void **ap)
 {
-	free(*ap);
-	*ap = NULL;
+	if (ap && *ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

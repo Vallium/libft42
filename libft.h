@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/07 17:49:15 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/09 16:54:30 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		ft_putstr_fd(const char *s, int fd);
 void		ft_putendl(const char *s);
 void		ft_putendl_fd(const char *s, int fd);
 void		ft_putnbr(int n);
-void		ft_putnbr_fd(int n);
+void		ft_putnbr_fd(int n, int fd);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
 void		ft_strdel(char **as);
@@ -63,7 +63,7 @@ char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		*ft_strsub(const char *s, unsigned int start, size_t len);
 char		*ft_strtrim(const char *s);
 char		*ft_strjoin(const char *s1, const char *s2);
-char		**ft_strsplit(const char *s, char c);
+/*char		**ft_strsplit(const char *s, char c);*/
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 
