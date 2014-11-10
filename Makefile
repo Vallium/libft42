@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2014/11/10 12:08:38 by aalliot          ###   ########.fr        #
+#    Updated: 2014/11/10 18:44:32 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC		= ft_toupper.c ft_tolower.c ft_strtrim.c ft_strsub.c ft_strstr.c \
 		  ft_putchar.c ft_memset.c ft_memmove.c ft_memdel.c ft_memcpy.c \
 		  ft_memcmp.c ft_memchr.c ft_memccpy.c ft_memalloc.c ft_isprint.c \
 		  ft_isdigit.c ft_isascii.c ft_isalpha.c ft_isalnum.c ft_bzero.c \
-		  ft_atoi.c
+		  ft_atoi.c ft_strsplit.c
 OBJ		= $(SRC:.c=.o)
 CC		= gcc
 FLAGS	= -Wall -Werror -Wextra
@@ -55,6 +55,10 @@ test2: re
 	curl -s http://pastebin.com/raw.php\?i\=KQRs4L2H > main.c
 	gcc -I . main.c libft.a
 	rm main.c
+	./a.out
+
+test3: re
+	gcc -Wall -Wextra -Werror -I . main.c libft.a
 	./a.out
 
 re: fclean all
