@@ -6,77 +6,71 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 13:56:26 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/10 19:55:35 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/11 12:56:13 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	nb_words(const char *s, char c)
+static int	wc(const char *s, char c)
 {
-	size_t		i;
-	size_t		j;
+	int		i;
+	int		j;
 
+	i = 0;
+	j = 0;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			j++;
+			++j;
 			while (s[i] != c)
 			{
 				if (!s[i])
 					return (j);
-				i++;
+				++i;
 			}
 		}
-		i++;
+		++i;
 	}
 	return (j);
 }
 
-static size_t	word_len(const char *s, size_t i, char c)
+static int	wl(const char *s, int i, int j, char c)
 {
-	size_t		j;
-
-	j = 0;
 	while (s[i] != c && s[i])
 	{
-		i++;
-		j++;
+		++i;
+		++j;
 	}
 	return (j);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char		**ft_strsplit(const char *s, char c)
 {
-	char		**dst;
-	size_t		i;
-	size_t		nb;
-	size_t		nb_max;
+	char	**ret;
+	int		i;
+	int		k;
+	int		w;
 
-	i = 0;
-	nb = 0;
 	if (!s)
 		return (0);
-	nb_max = nb_words(s, c);
-	i = 0;
-	dst = (char**)malloc(sizeof(char*) * (nb_max + 1));
-	if (!dst)
+	w = wc(s, c);
+	ret = (char **)malloc(sizeof(char *) * w + 1);
+	if (!ret)
 		return (NULL);
-	if (!nb_max)
-	{
-		*dst = 0;
-		return (dst);
-	}
-	while (nb < nb_max)
+	i = 0;
+	k = 0;
+	ret[w] = 0;
+	while (k < w)
 	{
 		while (s[i] == c)
-			i++;
-		dst[nb] = ft_strsub(s, i, word_len(s, i, c));
+			++i;
+		ret[k] = ft_strsub(s, i, wl(s, i, 0, c));
 		while (s[i] && s[i] != c)
 			i++;
-		nb++;
+		++k;
 	}
-	return (dst);
+	return (ret);
 }
