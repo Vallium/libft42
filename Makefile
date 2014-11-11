@@ -24,7 +24,7 @@ SRC		= ft_toupper.c ft_tolower.c ft_strtrim.c ft_strsub.c ft_strstr.c \
 		  ft_atoi.c ft_strsplit.c ft_itoa.c
 OBJ		= $(SRC:.c=.o)
 CC		= gcc
-FLAGS	= -Wall -Werror -Wextra
+FLAGS	= -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -33,9 +33,9 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.c
-	@$(CC) -I . -o $@ -c $? $(FLAGS)
+	@$(CC) $(FLAGS) -I . -o $@ -c $?
 
-.PHONY: clean fclean re test test2 testall
+.PHONY: clean fclean re test1 test2 testall
 
 clean:
 	@rm -f $(OBJ)
@@ -43,22 +43,24 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 
-testall: test test2
+other: re $(NAME)
+	@$(CC) -I . $(NAME) main.c
+	@./a.out
 
-test: re $(NAME)
-	curl -s http://pastebin.com/raw.php?i=p3BBP70K > main.c
-	gcc -I . main.c libft.a
-	rm main.c
-	./a.out
+testall: test1 test2
 
-test2: re
-	curl -s http://pastebin.com/raw.php\?i\=KQRs4L2H > main.c
-	gcc -I . main.c libft.a
-	rm main.c
-	./a.out
+test1: re $(NAME)
+	@curl -s http://pastebin.com/raw.php?i=cKeTYAjN > main.c
+	@$(CC) -I . $(NAME) main.c
+	@rm main.c
+	@./a.out
+	@rm a.out
 
-test3: re
-	gcc -Wall -Wextra -Werror -I . main.c libft.a
-	./a.out
+test2: re 
+	@curl -s http://pastebin.com/raw.php?i=ykKyqX78 > main.c
+	@$(CC) $(FLAGS) -I . $(NAME) main.c
+	@rm main.c
+	@./a.out
+	@rm a.out
 
 re: fclean all
