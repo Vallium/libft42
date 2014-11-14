@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/13 15:17:30 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/14 11:33:12 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ char				*ft_itoa(int n);
 char				**ft_strsplit(const char *s, char c);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+t_list				*ft_lstnew(const void *content, size_t content_size);
 
 #endif
