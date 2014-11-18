@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 17:34:11 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/04 18:08:09 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/17 14:54:41 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 char		*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	if (s == NULL)
+		return (NULL);
+	while (*s)
 	{
-		if (!(*s))
-			return (NULL);
+		if (*s == c)
+			return ((char *)s);
 		s++;
 	}
-	return ((char*)s);
+	return (NULL);
 }
