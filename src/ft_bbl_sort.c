@@ -12,7 +12,7 @@
 
 #include "includes/libft.h"
 
-void			ft_bbl_sort(char *tab)
+void			ft_bbl_sort(void **tab, int size, int (*f)(void *, void *))
 {
 	int			bl;
 	int			i;
@@ -22,9 +22,9 @@ void			ft_bbl_sort(char *tab)
 	{
 		bl = 1;
 		i = 0;
-		while (tab[i + 1])
+		while (i < (size - 1))
 		{
-			if (tab[i] > tab[i + 1])
+			if (f(tab[i], tab[i + 1]))
 			{
 				ft_swap_char(&tab[i], &tab[i + 1]);
 				bl = 0;
