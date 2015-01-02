@@ -30,7 +30,7 @@ int					ft_isprint(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
-int					ft_intlen(int i);
+int			ft_intlen(int i)
 
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -55,9 +55,9 @@ void				ft_striter(char *s, void (*f)(char*));
 void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 void				ft_swap(void **p1, void **p2);
 
-void				ft_q_sort(void **tab, size_t size, int (*f)(void*, void*));
-void				ft_bbl_sort(void **tab, int size, int (*f)(void *, void *));
-void				ft_merge_sort(int *tab, int lgt);
+void				ft_sort_qck(void **tab, size_t size, int (*f)(void*, void*));
+void				ft_sort_bbl(void **tab, int size, int (*f)(void *, void *));
+void				ft_sort_mrg(int *tab, int lgt);
 
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));

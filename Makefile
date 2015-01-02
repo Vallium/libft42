@@ -79,9 +79,9 @@ SRC		=	ft_bzero.c				\
 			ft_malloc.c				\
 			ft_burger.c				\
 			ft_swap.c				\
-			ft_bbl_sort.c			\
-			ft_q_sort.c				\
-			ft_merge_sort.c			\
+			ft_sort_bbl.c			\
+			ft_sort_qck.c				\
+			ft_sort_mrg.c			\
 			ft_intlen.c				\
 			get_next_line.c
 
