@@ -46,13 +46,15 @@ void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_bzero(void *s, size_t n);
 void				ft_memdel(void **ap);
-void				ft_q_sort(int *tab, int bg, int ed);
-void				ft_bbl_sort(void **tab, int size, int (*f)(void*, void*));
-void				ft_merge_sort(int *tab, int lgt);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char*));
 void				ft_striteri(char *s, void (*f)(unsigned int, char*));
+void				ft_swap(void **p1, void **p2);
+
+void				ft_q_sort(void **tab, size_t size, int (*f)(void*, void*));
+void				ft_bbl_sort(void **tab, int size, int (*f)(void *, void *));
+void				ft_merge_sort(int *tab, int lgt);
 
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
