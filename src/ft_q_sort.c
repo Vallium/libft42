@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	   sort(void **tab, int bg, int ed, int (*f)(void *, void *))
 {
@@ -29,7 +29,7 @@ void	   sort(void **tab, int bg, int ed, int (*f)(void *, void *))
 		while (f(tab[++lft], pvt) < 0)
 			;
 		if (lft < rgt)
-			swap(&tab[lft], &tab[rgt]);
+			ft_swap(&tab[lft], &tab[rgt]);
 		else
 			break ;
 	}
