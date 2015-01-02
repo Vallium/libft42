@@ -31,6 +31,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 int					ft_intlen(int i);
+int					ft_llilen(long long int i);
 
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -46,6 +47,7 @@ void				ft_putstr_sub(char *str, int start, int l);
 void				ft_putendl(const char *s);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr(int n);
+void				ft_putnbrll(long long int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_bzero(void *s, size_t n);
 void				ft_memdel(void **ap);

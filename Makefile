@@ -62,6 +62,7 @@ SRC		=	ft_bzero.c				\
 			ft_putchar.c			\
 			ft_putstr.c				\
 			ft_putnbr.c				\
+			ft_putnbrll.c			\
 			ft_putendl.c			\
 			ft_putchar_fd.c			\
 			ft_putstr_fd.c			\
@@ -80,9 +81,10 @@ SRC		=	ft_bzero.c				\
 			ft_burger.c				\
 			ft_swap.c				\
 			ft_sort_bbl.c			\
-			ft_sort_qck.c				\
+			ft_sort_qck.c			\
 			ft_sort_mrg.c			\
 			ft_intlen.c				\
+			ft_llilen.c				\
 			get_next_line.c
 
 DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
