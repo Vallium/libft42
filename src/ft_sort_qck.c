@@ -38,7 +38,7 @@ void			sort(void **tab, int bg, int ed, int (*f)(void *, void *))
 	sort(tab, rgt + 1, ed, f);
 }
 
-void			ft_sort_qck(void **tab, size_t size, int (*f)(void *, void *))
+void			ft_sort_qck(void **tab, int size, int (*f)(void *, void *))
 {
 	sort(tab, 0, size - 1, f);
 }

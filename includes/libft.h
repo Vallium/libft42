@@ -55,7 +55,7 @@ void				ft_striter(char *s, void (*f)(char*));
 void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 void				ft_swap(void **p1, void **p2);
 
-void				ft_sort_qck(void **tab, size_t size, int (*f)(void*, void*));
+void				ft_sort_qck(void **tab, int size, int (*f)(void*, void*));
 void				ft_sort_bbl(void **tab, int size, int (*f)(void *, void *));
 void				ft_sort_mrg(int *tab, int lgt);
 
