@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2015/01/02 15:14:31 by aalliot          ###   ########.fr        #
+#    Updated: 2015/01/02 16:57:31 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,10 +78,11 @@ SRC		=	ft_bzero.c				\
 			ft_lstsimpledelone.c	\
 			ft_malloc.c				\
 			ft_burger.c				\
-			ft_swap.c					\
-			ft_bbl_sort.c				\
+			ft_swap.c				\
+			ft_bbl_sort.c			\
 			ft_q_sort.c				\
 			ft_merge_sort.c			\
+			ft_intlen.c				\
 			get_next_line.c
 
 DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
