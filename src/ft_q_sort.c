@@ -12,12 +12,13 @@
 
 #include "libft.h"
 
-void	   sort(void **tab, int bg, int ed, int (*f)(void *, void *))
+void			sort(void **tab, int bg, int ed, int (*f)(void *, void *))
 {
-	void		*pvt = tab[bg];
+	void		*pvt;
 	int			lft;
 	int			rgt;
 
+	pvt = tab[bg];
 	lft = bg - 1;
 	rgt = ed + 1;
 	if (bg >= ed)
@@ -37,7 +38,7 @@ void	   sort(void **tab, int bg, int ed, int (*f)(void *, void *))
 	sort(tab, rgt + 1, ed, f);
 }
 
-void	   ft_q_sort(void **tab, size_t size, int (*f)(void *, void *))
+void			ft_q_sort(void **tab, size_t size, int (*f)(void *, void *))
 {
 	sort(tab, 0, size - 1, f);
 }
