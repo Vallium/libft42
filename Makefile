@@ -110,7 +110,7 @@ else
 endif
 $(shell mkdir -p $(STATIC_DIR) $(DYNAMIC_DIR) $(DEBUG_DIR))
 
-all: $(STATIC_LIB) #$(DYNAMIC_LIB) $(DEBUG_LIB)
+all: $(STATIC_LIB) $(DYNAMIC_LIB) $(DEBUG_LIB)
 
 $(STATIC_LIB): $(STATIC_OBJ)
 	ar rc $@ $(STATIC_OBJ)
