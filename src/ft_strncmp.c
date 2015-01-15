@@ -21,8 +21,10 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n)
 	str2 = (unsigned char*)s2;
 	while (n--)
 	{
+		if (!*str1 && !*str2)
+			return (0);
 		if (*str1 != *str2)
-			return (*str1 - *str2);
+			return ((*str1 - *str2) < 0 ? -1 : 1);
 		str1++;
 		str2++;
 	}
