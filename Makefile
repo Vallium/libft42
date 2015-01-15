@@ -73,6 +73,7 @@ SRC		=	ft_bzero.c				\
 			ft_lstdel.c				\
 			ft_lstadd.c				\
 			ft_lstiter.c			\
+			ft_lstmap.c				\
 			ft_lstpushback.c		\
 			ft_lstsmartpushback.c	\
 			ft_lstsimpledel.c		\
@@ -109,7 +110,7 @@ else
 endif
 $(shell mkdir -p $(STATIC_DIR) $(DYNAMIC_DIR) $(DEBUG_DIR))
 
-all: $(STATIC_LIB) $(DYNAMIC_LIB) $(DEBUG_LIB)
+all: $(STATIC_LIB) #$(DYNAMIC_LIB) $(DEBUG_LIB)
 
 $(STATIC_LIB): $(STATIC_OBJ)
 	ar rc $@ $(STATIC_OBJ)
