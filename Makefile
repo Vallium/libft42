@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2015/01/02 16:57:31 by aalliot          ###   ########.fr        #
+#    Updated: 2015/02/18 13:24:40 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC		=	ft_bzero.c				\
 			ft_striter.c			\
 			ft_striteri.c			\
 			ft_strjoin.c			\
+			ft_strjoin_free.c		\
 			ft_strmap.c				\
 			ft_strmapi.c			\
 			ft_strnequ.c			\
