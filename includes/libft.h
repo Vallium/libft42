@@ -64,12 +64,14 @@ void				ft_sort_mrg(int *tab, int lgt);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *nw);
+int					ft_lstlen(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstpushback(t_list **start, t_list *nw);
 void				ft_lstsmartpushback(t_list **start, t_list *nw);
 void				ft_lstsimpledel(t_list **alst);
 void				ft_lstsimpledelone(t_list **alst);
+void				ft_lstdelnode(t_list **node);
 
 void				*ft_malloc(size_t n);
 void				*ft_memset(void *b, int c, size_t len);

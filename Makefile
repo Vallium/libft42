@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2015/02/18 13:24:40 by aalliot          ###   ########.fr        #
+#    Updated: 2015/02/15 19:34:52 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,12 +73,14 @@ SRC		=	ft_bzero.c				\
 			ft_lstdelone.c			\
 			ft_lstdel.c				\
 			ft_lstadd.c				\
+			ft_lstlen.c				\
 			ft_lstiter.c			\
 			ft_lstmap.c				\
 			ft_lstpushback.c		\
 			ft_lstsmartpushback.c	\
 			ft_lstsimpledel.c		\
 			ft_lstsimpledelone.c	\
+			ft_lstdelnode.c			\
 			ft_malloc.c				\
 			ft_burger.c				\
 			ft_kebab.c				\
@@ -106,7 +108,7 @@ NORMINETTE	= ~/project/colorminette/colorminette
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S),Linux)
-	FLAGS	= -Wall -Wextra #-Werror
+	FLAGS	= -Wall -Wextra -Werror -Wno-unused-result
 else
 	FLAGS	= -Wall -Wextra -Werror
 endif
@@ -145,4 +147,7 @@ clean:
 fclean: clean
 	@rm -f $(STATIC_LIB) $(DYNAMIC_LIB) $(DEBUG_LIB)
 
-re: fclean all
+re: fclean
+	make
+
+reall: all
