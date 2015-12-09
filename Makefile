@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2015/11/26 15:07:33 by aalliot          ###   ########.fr        #
+#*   Updated: 2015/12/08 20:33:49 by aalliot          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC		=	ft_bzero.c				\
 			ft_striter.c			\
 			ft_striteri.c			\
 			ft_strjoin.c			\
+			ft_strrev.c				\
 			ft_strjoin_free.c		\
 			ft_strmap.c				\
 			ft_strmapi.c			\
@@ -92,6 +93,8 @@ SRC		=	ft_bzero.c				\
 			ft_llilen.c				\
 			ft_longlen.c			\
 			ft_ulonglen.c			\
+			ft_binlen.c				\
+			ft_putnbrul.c			\
 			get_next_line.c
 
 DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
@@ -116,7 +119,7 @@ else
 endif
 $(shell mkdir -p $(STATIC_DIR) $(DYNAMIC_DIR) $(DEBUG_DIR))
 
-all: $(STATIC_LIB) $(DYNAMIC_LIB) $(DEBUG_LIB)
+all: $(STATIC_LIB) # $(DYNAMIC_LIB) $(DEBUG_LIB)
 
 $(STATIC_LIB): $(STATIC_OBJ)
 	ar rc $@ $(STATIC_OBJ)
