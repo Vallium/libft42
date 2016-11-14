@@ -3,3 +3,4 @@
 *.so
 /debug/
 /dynamic/
+.DS_Store
