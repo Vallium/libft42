@@ -21,9 +21,9 @@ typedef struct			s_list_db
 	struct s_list_db	*prev;
 }						t_list_db;
 
-void					ft_lstpushback_dbl(t_list **start, t_list *nw);
-void					ft_lstsmartpushback_dbl(t_list **start, t_list *nw);
-void					ft_lstadd_dbl(t_list **alst, t_list *nw);
-t_list					*ft_lstnew_dbl(const void *content, size_t content_size);
+void					ft_lstpushback_dbl(t_list_db **start, t_list_db *nw);
+void					ft_lstsmartpushback_dbl(t_list_db **start, t_list_db *nw);
+void					ft_lstadd_dbl(t_list_db **alst, t_list_db *nw);
+t_list_db				*ft_lstnew_dbl(const void *content, size_t content_size);
 
 #endif
