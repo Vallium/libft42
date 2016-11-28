@@ -97,7 +97,8 @@ SRC		=	ft_bzero.c				\
 			ft_putnbrul.c			\
 			get_next_line.c			\
 			ft_lstdnew.c			\
-			ft_lstdadd.c
+			ft_lstdadd.c			\
+			ft_lstddelone.c
 
 DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
 STATIC_OBJ	= $(patsubst %.c,$(STATIC_DIR)/%.o,$(SRC))
