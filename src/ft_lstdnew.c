@@ -25,7 +25,7 @@ t_lstd		*ft_lstdnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(ret->content = (void*)malloc(sizeof(content_size))))
+		if (!(ret->content = (void *)malloc(sizeof(content_size))))
 			return (NULL);
 		ft_memcpy(ret->content, content, content_size);
 	}
