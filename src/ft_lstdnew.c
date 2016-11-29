@@ -16,7 +16,7 @@ t_lstd		*ft_lstdnew(void const *content, size_t content_size)
 {
 	t_lstd	*ret;
 
-	if ((ret = (t_lstd *)malloc(sizeof(t_lstd))))
+	if (!(ret = (t_lstd *)malloc(sizeof(t_lstd))))
 		return (NULL);
 	if (content == NULL)
 	{
