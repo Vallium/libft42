@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2016/11/28 13:37:09 by aalliot          ###   ########.fr       */
+/*   Updated: 2016/11/30 15:29:47 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void				ft_lstdelnode(t_list **node);
 
 t_lstd				*ft_lstdnew(void const *content, size_t content_size);
 void				ft_lstdadd(t_lstd **alst, t_lstd *nw);
-void				ft_lstddelone(t_lstd **alst, void (*del)(void *, size_t size));
+void				ft_lstddelone(t_lstd **alst, void (*del)(void *, size_t s));
 
 void				*ft_malloc(size_t n);
 void				*ft_memset(void *b, int c, size_t len);

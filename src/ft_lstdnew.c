@@ -6,9 +6,10 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 13:37:49 by aalliot           #+#    #+#             */
-/*   Updated: 2016/11/28 13:43:54 by aalliot          ###   ########.fr       */
+/*   Updated: 2016/11/30 15:29:10 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -34,4 +35,3 @@ t_lstd		*ft_lstdnew(void const *content, size_t content_size)
 	ret->prev = NULL;
 	return (ret);
 }
-
