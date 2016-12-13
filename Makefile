@@ -97,6 +97,7 @@ SRC		=	ft_bzero.c				\
 			ft_putnbrul.c			\
 			get_next_line.c			\
 			ft_lstdnew.c			\
+			ft_lstdadd_circ.c		\
 			ft_lstdadd.c			\
 			ft_lstddelone.c
 

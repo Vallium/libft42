@@ -87,7 +87,8 @@ void				ft_lstsimpledelone(t_list **alst);
 void				ft_lstdelnode(t_list **node);
 
 t_lstd				*ft_lstdnew(void const *content, size_t content_size);
-void				ft_lstdadd(t_lstd **alst, t_lstd *nw);
+void				ft_lstdadd(t_lstd **alst, t_lstd *nw, int prev);
+void				ft_lstdadd_circ(t_lstd **alst, t_lstd *nw);
 void				ft_lstddelone(t_lstd **alst, void (*del)(void *, size_t s));
 
 void				*ft_malloc(size_t n);
