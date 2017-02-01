@@ -1,6 +1,7 @@
 *.o
 *.a
 *.so
+/static/
 /debug/
 /dynamic/
 .DS_Store
