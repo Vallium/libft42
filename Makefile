@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2016/11/28 14:31:49 by aalliot          ###   ########.fr        #
+#    Updated: 2017/02/01 19:14:07 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,10 @@ DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
 STATIC_OBJ	= $(patsubst %.c,$(STATIC_DIR)/%.o,$(SRC))
 DEBUG_OBJ	= $(patsubst %.c,$(DEBUG_DIR)/%.o,$(SRC))
 
+DYN_DEPS	= $(patsubst %.c,$(DYNAMIC_DIR)/%.d,$(SRC))
+STATIC_DEPS	= $(patsubst %.c,$(STATIC_DIR)/%.d,$(SRC))
+DEBUG_DEPS	= $(patsubst %.c,$(DEBUG_DIR)/%.d,$(SRC))
+
 HEAD_DIR	= includes
 SRC_DIR		= src
 DEBUG_DIR	= debug
@@ -112,7 +116,8 @@ STATIC_DIR	= static
 DYNAMIC_DIR	= dynamic
 
 CC			= gcc
-NORMINETTE	= ~/project/colorminette/colorminette
+OPTI		= -O3
+DEPS		= -MT $@ -MD -MP -MF $(subst .o,.d,$@)
 
 UNAME_S := $(shell uname -s)
 
@@ -123,7 +128,11 @@ else
 endif
 $(shell mkdir -p $(STATIC_DIR) $(DYNAMIC_DIR) $(DEBUG_DIR))
 
-all: $(STATIC_LIB) # $(DYNAMIC_LIB) $(DEBUG_LIB)
+all: $(STATIC_LIB)
+
+debug: $(DEBUG_LIB)
+
+dynamic: $(DYNAMIC_LIB)
 
 $(STATIC_LIB): $(STATIC_OBJ)
 	ar rc $@ $(STATIC_OBJ)
@@ -133,25 +142,29 @@ $(DEBUG_LIB): $(DEBUG_OBJ)
 	ar rc $@ $(DEBUG_OBJ)
 	ranlib $@
 
+-include $(DYNAMIC_OBJ:.o=.d)
+
 $(DYNAMIC_LIB): $(DYNAMIC_OBJ)
-	$(CC) -O3 -shared -o $@ $(DYNAMIC_OBJ)
+	$(CC) $(OPTI) -shared -o $@ $(DYNAMIC_OBJ)
+
+-include $(STATIC_OBJ:.o=.d)
 
 $(STATIC_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -O3 -I $(HEAD_DIR) -o $@ -c $< $(FLAGS)
+	$(CC) $(FLAGS) $(OPTI) $(DEPS) -I $(HEAD_DIR) -o $@ -c $<
+
+-include $(DEBUG_OBJ:.o=.d)
 
 $(DEBUG_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -I $(HEAD_DIR) -o $@ -c $< $(FLAGS) -g
+	$(CC) $(FLAGS) -g $(DEPS) -I $(HEAD_DIR) -o $@ -c $<
 
 $(DYNAMIC_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -O3 -fPIC -I $(HEAD_DIR) -o $@ -c $< $(FLAGS)
+	$(CC) $(FLAGS) $(DEPS) -fPIC -I $(HEAD_DIR) -o $@ -c $<
 
-.PHONY: clean fclean re norme
-
-norme:
-	@$(NORMINETTE) $(SRC_DIR)/ $(HEAD_DIR)/
+.PHONY: clean fclean re
 
 clean:
 	@rm -f $(STATIC_OBJ) $(DYNAMIC_OBJ) $(DEBUG_OBJ)
+	@rm -f $(STATIC_DEPS) $(DYN_DEPS) $(DEBUG_DEPS)
 
 fclean: clean
 	@rm -f $(STATIC_LIB) $(DYNAMIC_LIB) $(DEBUG_LIB)
