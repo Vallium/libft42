@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2017/02/01 19:14:07 by aalliot          ###   ########.fr        #
+#    Updated: 2017/07/20 12:18:38 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,8 @@ SRC		=	ft_bzero.c				\
 			ft_putchar.c			\
 			ft_putstr.c				\
 			ft_putnbr.c				\
+			ft_puthex.c				\
+			ft_putptr.c				\
 			ft_putnbrll.c			\
 			ft_putendl.c			\
 			ft_putchar_fd.c			\

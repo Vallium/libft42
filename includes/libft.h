@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:08:04 by aalliot           #+#    #+#             */
-/*   Updated: 2016/11/30 15:29:47 by aalliot          ###   ########.fr       */
+/*   Updated: 2017/07/20 12:20:53 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# define HEX "0123456789abcdef"
 
 typedef struct		s_list
 {
@@ -58,6 +60,8 @@ void				ft_putstr_sub(char *str, int start, int l);
 void				ft_putendl(const char *s);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr(int n);
+void				ft_puthex(unsigned long l);
+void				ft_putptr(void *p);
 void				ft_putnbrll(long long int n);
 void				ft_putnbrul(unsigned long n);
 void				ft_putnbr_fd(int n, int fd);
