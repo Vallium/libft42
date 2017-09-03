@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2017/08/03 18:23:05 by aalliot          ###   ########.fr        #
+#    Updated: 2017/09/03 16:24:37 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,8 @@ SRC		=	ft_bzero.c				\
 			get_next_line.c			\
 			ft_lstdnew.c			\
 			ft_lstdadd_circ.c		\
-			ft_lstddelone.c
+			ft_lstddelone.c			\
+			ft_strerror.c
 
 DYNAMIC_OBJ	= $(patsubst %.c,$(DYNAMIC_DIR)/%.o,$(SRC))
 STATIC_OBJ	= $(patsubst %.c,$(STATIC_DIR)/%.o,$(SRC))
